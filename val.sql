@@ -1,0 +1,93 @@
+-- MySQL dump 10.13  Distrib 5.1.63, for suse-linux-gnu (i686)
+--
+-- Host: localhost    Database: valutisite
+-- ------------------------------------------------------
+-- Server version	5.1.63-log
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8 */;
+/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
+/*!40103 SET TIME_ZONE='+00:00' */;
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+
+--
+-- Table structure for table `kupuva`
+--
+
+DROP TABLE IF EXISTS `kupuva`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `kupuva` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `date` date NOT NULL,
+  `usd` float NOT NULL,
+  `eur` float NOT NULL,
+  `gbp` float NOT NULL,
+  `dkk` float NOT NULL,
+  `nok` float NOT NULL,
+  `chf` float NOT NULL,
+  `trl` float NOT NULL,
+  `sek` float NOT NULL,
+  `ron` float NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=11 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `kupuva`
+--
+
+LOCK TABLES `kupuva` WRITE;
+/*!40000 ALTER TABLE `kupuva` DISABLE KEYS */;
+INSERT INTO `kupuva` VALUES (1,'2013-09-27',1.432,1.95,2.299,0.258,0.239,1.574,0.672,0.223,0.427),(2,'2013-09-26',1.429,1.95,2.298,0.358,0.237,1.57,0.674,0.222,0.428),(3,'2013-09-25',1.434,1.95,2.292,0.248,0.239,1.57,0.68,0.224,0.428),(4,'2013-09-24',1.432,1.95,2.294,0.258,0.241,1.572,0.685,0.224,0.427),(5,'2013-09-23',1.428,1.95,2.287,0.267,0.24,1.567,0.686,0.224,0.427),(6,'2013-09-20',1.427,1.95,2.289,0.258,0.244,1.567,0.692,0.225,0.428),(7,'2013-09-19',1.427,1.95,2.303,0.278,0.244,1.565,0.696,0.224,0.43),(8,'2013-09-18',1.446,1.95,2.3,0.268,0.244,1.561,0.686,0.223,0.426),(9,'2013-09-16',1.446,1.95,2.306,0.258,0.244,1.563,0.68,0.222,0.426),(10,'2013-09-13',1.456,1.95,2.297,0.248,0.246,1.559,0.682,0.223,0.426);
+/*!40000 ALTER TABLE `kupuva` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `prodava`
+--
+
+DROP TABLE IF EXISTS `prodava`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `prodava` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `date` date NOT NULL,
+  `usd` float NOT NULL,
+  `eur` float NOT NULL,
+  `gbp` float NOT NULL,
+  `dkk` float NOT NULL,
+  `nok` float NOT NULL,
+  `chf` float NOT NULL,
+  `trl` float NOT NULL,
+  `sek` float NOT NULL,
+  `ron` float NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=11 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `prodava`
+--
+
+LOCK TABLES `prodava` WRITE;
+/*!40000 ALTER TABLE `prodava` DISABLE KEYS */;
+INSERT INTO `prodava` VALUES (1,'2013-09-27',1.468,1.959,2.357,0.266,0.247,1.614,0.762,0.23,0.449),(2,'2013-09-26',1.465,1.959,2.356,0.276,0.245,1.61,0.764,0.229,0.45),(3,'2013-09-25',1.47,1.959,2.35,0.254,0.247,1.61,0.77,0.231,0.448),(4,'2013-09-24',1.468,1.959,2.352,0.266,0.249,1.612,0.775,0.231,0.449),(5,'2013-09-23',1.464,1.959,2.345,0.286,0.248,1.607,0.776,0.231,0.449),(6,'2013-09-20',1.463,1.959,2.347,0.266,0.252,1.607,0.782,0.232,0.45),(7,'2013-09-19',1.463,1.959,2.361,0.296,0.252,1.605,0.786,0.231,0.452),(8,'2013-09-18',1.482,1.959,2.358,0.279,0.252,1.601,0.776,0.23,0.448),(9,'2013-09-16',1.482,1.959,2.364,0.266,0.252,1.603,0.77,0.229,0.448),(10,'2013-09-13',1.492,1.959,2.355,0.266,0.254,1.599,0.772,0.23,0.448);
+/*!40000 ALTER TABLE `prodava` ENABLE KEYS */;
+UNLOCK TABLES;
+/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+
+-- Dump completed on 2013-09-29 16:11:56
